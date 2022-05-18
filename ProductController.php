@@ -51,6 +51,7 @@ class ProductController extends Controller
                         ->withInput();
             } else {
             // Lưu thông tin vào database, phần này sẽ giới thiệu ở bài về database
+            // em không hiểu khúc này tại sao lỗi cho lắm
             $active = $request->has('active')? 1 : 0;
             $product_id = DB::table('product')->insertGetId(
                 'name'       => $request->input('name');
