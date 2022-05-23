@@ -19,7 +19,6 @@ class UserController extends Controller
         'required' => 'Trường :attribute bắt buộc nhập.',
         'email'    => 'Trường :attribute phải có định dạng email'
     ];
-    // báo lỗi ngay chữ make mà không biết tại sao
     $validator = Validator::make($request->all(), [
             'name'     => 'required|max:255',
             'email'    => 'required|email',
